@@ -1,14 +1,15 @@
-
-#Calculator.c source code :
+#Calculator.c source code : 
 //easy copy and paste 
-actual code starting from "#include <stdio.h>" i.e, line 6.
+actual code starting from "#include <stdio.h>" i.e, line 6
+
 
 #include <stdio.h>
+
 int main() 
-{ 
+{
+	
     int a, b, opt, res; 
 	// declaring variables
-
     printf("Welcome To Switch Case Calculator\n"); 
 	// Welcome command / Message
     printf("Enter first number: ");
