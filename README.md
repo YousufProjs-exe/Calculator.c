@@ -1,21 +1,76 @@
-# Calculator.c
-A Simple C Calculator for Basic Arithmetic Operations
 
-A straightforward command-line calculator built in C that performs basic arithmetic operations between two numbers. This calculator supports fundamental mathematical operations including addition, subtraction, multiplication, and division. Designed for simplicity and educational purposes, it takes two numeric inputs and an operator, then returns the result. Ideal for learning C fundamentals like input/output, conditional statements, and basic arithmetic logic.
+#include <stdio.h>
 
-Features:
+int main() 
+{ 
+    int a , b , opt , res ; 
+	// declaring variables
 
-Simple two-number arithmetic calculations.
-Support for basic operations: +, -, *, /.
-Command-line interface.
-Error handling for invalid inputs.
-Educational project perfect for learning C fundamentals.
+    printf("Welcome To Switch Case Calculator\n"); 
+	// Welcome command / Message
+    printf("Enter first number: ");
+    scanf("%d", &a); 
+	// asking user for first number (first Input)
+    printf("Enter second number: ");
+    scanf("%d", &b); 
+	// asking user for second number (Second Input)
 
-How it works: The calculator prompts users to enter two numbers and select an operation. It then performs the calculation and displays the result. The program is designed with clarity in mind, making it an excellent resource for beginners learning C programming concepts such as input/output handling, conditional statements, loops, and basic arithmetic logic.
+    printf("Arithmetic Operations: \n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("5. Modulus Division\n"); 
+	// Setting options
+	
+    printf("Enter your choice: ");
+    scanf("%d", &opt);
 
-Perfect for:
+    switch(opt)
+	{ 
+        case 1:
+            res = a + b;
+            printf("Addition: %d\n", res);
+            break;
+            
+        case 2:
+            res = a - b;
+            printf("Subtraction: %d\n", res);
+            break;
+            
+        case 3:
+            res = a * b;
+            printf("Multiplication: %d\n", res);
+            break;
+            
+        case 4:
+            if(b != 0) 
+            {
+                res = a / b;
+                printf("Division: %d\n", res);
+            } 
+            else 
+            {
+                printf("Error: Division by zero!\n");
+            }
+            break;
+            
+        case 5:
+            if(b != 0) 
+            {
+                res = a % b;
+                printf("Modulus Division: %d\n", res);
+            } 
+            else 
+            {
+                printf("Error: Division by zero!\n");
+            }
+            break;
+            
+        default:
+            printf("Invalid Option Selected\n");
+			  // default Case for Invalid attempts
+    }
 
-Students learning C programming.
-Understanding basic calculator logic.
-Learning fundamental programming concepts.
-Quick arithmetic calculations.
+    return 0;
+}
