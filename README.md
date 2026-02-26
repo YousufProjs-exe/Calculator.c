@@ -1,9 +1,13 @@
 
-#include <stdio.h>
 
+#Calculator.c source code :
+
+//easy copy and paste 
+
+#include <stdio.h>
 int main() 
 { 
-    int a , b , opt , res ; 
+    int a, b, opt, res; 
 	// declaring variables
 
     printf("Welcome To Switch Case Calculator\n"); 
@@ -44,32 +48,26 @@ int main()
             break;
             
         case 4:
-            if(b != 0) 
-            {
+            if(b != 0) {
                 res = a / b;
                 printf("Division: %d\n", res);
-            } 
-            else 
-            {
+            } else {
                 printf("Error: Division by zero!\n");
             }
             break;
             
         case 5:
-            if(b != 0) 
-            {
+            if(b != 0) {
                 res = a % b;
                 printf("Modulus Division: %d\n", res);
-            } 
-            else 
-            {
+            } else {
                 printf("Error: Division by zero!\n");
             }
             break;
             
         default:
             printf("Invalid Option Selected\n");
-			  // default Case for Invalid attempts
+			// default Case for Invalid attempts
     }
 
     return 0;
