@@ -1,8 +1,7 @@
 
-
 #Calculator.c source code :
-
 //easy copy and paste 
+actual code starting from "#include <stdio.h>" i.e, line 6.
 
 #include <stdio.h>
 int main() 
