@@ -1,74 +1,9 @@
-#Calculator.c source code : 
-//easy copy and paste 
-actual code starting from "#include <stdio.h>" i.e, line 6
+Building a straightforward command-line calculator in C offers an excellent opportunity to reinforce fundamental programming concepts such as input/output operations, variable declaration, and control flow statements like switch or if-else. This program is designed to take two numeric inputs from the user and an operator symbol (+, -, *, /), then perform the corresponding arithmetic operation and display the result. The use of double or float data types allows the calculator to handle decimal numbers, while careful error handling, such as checking for division by zero, ensures robust performance.
 
-
-#include <stdio.h>
-
-int main() 
-{
-	
-    int a, b, opt, res; 
-	// declaring variables
-    printf("Welcome To Switch Case Calculator\n"); 
-	// Welcome command / Message
-    printf("Enter first number: ");
-    scanf("%d", &a); 
-	// asking user for first number (first Input)
-    printf("Enter second number: ");
-    scanf("%d", &b); 
-	// asking user for second number (Second Input)
-
-    printf("Arithmetic Operations: \n");
-    printf("1. Addition\n");
-    printf("2. Subtraction\n");
-    printf("3. Multiplication\n");
-    printf("4. Division\n");
-    printf("5. Modulus Division\n"); 
-	// Setting options
-	
-    printf("Enter your choice: ");
-    scanf("%d", &opt);
-
-    switch(opt)
-	{ 
-        case 1:
-            res = a + b;
-            printf("Addition: %d\n", res);
-            break;
-            
-        case 2:
-            res = a - b;
-            printf("Subtraction: %d\n", res);
-            break;
-            
-        case 3:
-            res = a * b;
-            printf("Multiplication: %d\n", res);
-            break;
-            
-        case 4:
-            if(b != 0) {
-                res = a / b;
-                printf("Division: %d\n", res);
-            } else {
-                printf("Error: Division by zero!\n");
-            }
-            break;
-            
-        case 5:
-            if(b != 0) {
-                res = a % b;
-                printf("Modulus Division: %d\n", res);
-            } else {
-                printf("Error: Division by zero!\n");
-            }
-            break;
-            
-        default:
-            printf("Invalid Option Selected\n");
-			// default Case for Invalid attempts
-    }
-
-    return 0;
-}
+C Calculator Program Explanation
+The core logic of the calculator program typically follows these steps:
+Variable Declaration: Declare variables to store the two operands (e.g., num1, num2 as double) and the operator (e.g., op as char). A variable for the result may also be used.
+User Input: Prompt the user to enter the operator and the two numbers using printf() and read them using scanf(). It is important to use a space before the %c format specifier in scanf (e.g., " %c") to consume any leftover newline characters from previous inputs.
+Operation Logic: A switch statement is commonly used to manage the different arithmetic operations efficiently. Each case within the switch corresponds to a specific operator character and executes the relevant calculation.
+Error Handling: A specific check can be implemented within the division case to ensure the program handles division by zero gracefully, preventing a runtime error. A default case in the switch statement catches any invalid operator inputs.
+Output: The final result of the calculation is printed to the console using printf(), formatted for readability (e.g., limiting decimal places). 
