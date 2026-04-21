@@ -4,6 +4,11 @@ C Calculator Program Explanation
 The core logic of the calculator program typically follows these steps:
 Variable Declaration: Declare variables to store the two operands (e.g., num1, num2 as double) and the operator (e.g., op as char). A variable for the result may also be used.
 User Input: Prompt the user to enter the operator and the two numbers using printf() and read them using scanf(). It is important to use a space before the %c format specifier in scanf (e.g., " %c") to consume any leftover newline characters from previous inputs.
-Operation Logic: A switch statement is commonly used to manage the different arithmetic operations efficiently. Each case within the switch corresponds to a specific operator character and executes the relevant calculation.
+Operation Logic: A switch statement is commonly used to manage the different 
+arithmetic operations efficiently. Each case within the switch corresponds to a specific operator character and executes the relevant calculation.
 Error Handling: A specific check can be implemented within the division case to ensure the program handles division by zero gracefully, preventing a runtime error. A default case in the switch statement catches any invalid operator inputs.
 Output: The final result of the calculation is printed to the console using printf(), formatted for readability (e.g., limiting decimal places). 
+
+message on yousuf.env @instagram for updates :) .
+THANK YOU 
+K.YOUSUF
